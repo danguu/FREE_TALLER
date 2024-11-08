@@ -7,22 +7,18 @@ public class Main {
         final int EstNum = 10;
         Estudiante[] estudiantes = new Estudiante[EstNum];
 
-        // Crear estudiantes
         for (int i = 0; i < EstNum; i++) {
             estudiantes[i] = new Estudiante(i + 1);
         }
 
-        // Mostrar lista de estudiantes
         System.out.println("Lista de Estudiantes:");
         mostrarEstudiantes(estudiantes);
 
-        // Buscar un estudiante
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el código del estudiante que desea ver: ");
         int codigoBuscado = scanner.nextInt();
         buscarEstudiante(estudiantes, codigoBuscado);
 
-        // Ordenar y mostrar estudiantes por definitiva
         ordenarPorDefinitiva(estudiantes);
         System.out.println("\nLista de Estudiantes ordenada por nota definitiva:");
         mostrarEstudiantes(estudiantes);
